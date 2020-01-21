@@ -4,6 +4,16 @@
 *, *::before, *::after {
     box-sizing: border-box;
 }
+/* hidden contents */
+.a11y-hidden {    
+    position: absolute;
+    width:1px;
+    height:1px;
+    overflow: hidden;
+    margin:-1px;
+    clip:rect(0,0,0,0);
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
 /* CSS Module */
 /* float issue solved CSS */
 .clearfix::after {
@@ -11,21 +21,75 @@
     content:"";
     clear:both;
 }
+/* 기본설정 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+html {
+    font-size: 10px;
+}
+body {
+    font-size: 1.4rem;
+    color: #181818;
+    background-color: #fff;
+}
 /* Container */
 .container {
     height: 100vh;
     background-color: silver;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
 }
 .header, .visual, .main, .slogan, .footer {    
     width:940px;    
-    /* margin:0 auto; */
+    margin:0 auto;
 }
 .header {
-    background-color: yellow;
-    height: 10vh;
+    background-color: #ffffff;    
+    border-radius: 0 0 15px 15px;
+    padding: 0 30px;
+    position: relative;
+}
+/* logo */
+.logo {    
+    margin: 0;    
+    position: absolute;
+    top:45px;
+    left:65px;
+}
+/* member link */
+.member {    
+    margin: 0;
+    padding: 2px 0;
+    list-style-type:none;
+    text-align: right;   
+    font-size: 0; 
+    position: relative;
+    right: -10px;
+}
+.member li, .member a {
+    display: inline-block;
+}
+.member li {        
+    font-size: 1.4rem;  
+}
+/*
+.member li::before {
+    content:":";
+    font-size:16px;
+} 
+.member .bar-none::before {
+    content:"";
+} */
+.member li:nth-child(n+2)::before {
+    content: ":";
+    margin: 0 2px;
+}
+.member a{
+    text-transform: uppercase;
+    padding: 10px;        
 }
 .visual {
     background-color: lime;
@@ -33,7 +97,7 @@
 }
 .main {
     height:90vh;
-    background-color: blue;
+    background-color: #fff;
     /* overflow: auto;  design problem*/            
     /* padding: 30px 15px; */
     padding: 30px 15px;
@@ -70,9 +134,9 @@
 .footer-bg {
     background-color: purple;
     width:100vw;
-    display:flex;
+    /* display:flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: center; */
 }
 .footer {
     background-color: yellow;
