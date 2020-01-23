@@ -1,10 +1,12 @@
 @charset "utf-8";
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(./fontello.css);
 @import url(./normalize.css);
 /* 기본 박스 사이징 재설정 (width에 border-width와 padding을 설정 */
 *, *::before, *::after {
     box-sizing: border-box;
 }
-/* hidden contents */
+/* HIDDEN CONTENT */
 .a11y-hidden {    
     position: absolute;
     width:1px;
@@ -14,14 +16,14 @@
     clip:rect(0,0,0,0);
     clip-path: polygon(0 0, 0 0, 0 0);
 }
-/* CSS Module */
+/* CSS MODULE */
 /* float issue solved CSS */
 .clearfix::after {
     display:block;
     content:"";
     clear:both;
 }
-/* 기본설정 */
+/* COMMON SETTING */
 a {
     text-decoration: none;
     color: inherit;
@@ -33,8 +35,10 @@ body {
     font-size: 1.4rem;
     color: #181818;
     background-color: #fff;
+    font-family:  'Spoqa Han Sans', 'Sans-serif';
+    font-weight: 300;
 }
-/* Container */
+/* CONTAINER */
 .container {
     height: 100vh;
     background-color: silver;
@@ -43,7 +47,7 @@ body {
     align-items: center; */
 }
 .header, .visual, .main, .slogan, .footer {    
-    width:940px;    
+    width:940px;
     margin:0 auto;
 }
 .header {
@@ -52,14 +56,15 @@ body {
     padding: 0 30px;
     position: relative;
 }
-/* logo */
+/* LOGO */
 .logo {    
     margin: 0;    
     position: absolute;
-    top:45px;
-    left:65px;
+    top:47px;
+    left:62px;
+    /* z-index: 10; */
 }
-/* member link */
+/* MEMBER LINK */
 .member {    
     margin: 0;
     padding: 2px 0;
@@ -91,10 +96,150 @@ body {
     text-transform: uppercase;
     padding: 10px;        
 }
+/* MAIN MENU */
+.navigation {    
+    padding-bottom: 50px;
+}
+.menu {    
+    height: 47px;
+    list-style-type: none;
+    padding-left: 229px;
+    margin: 0;
+    background: linear-gradient(to bottom, #e8852e 0%,#ed552f 35%,#ed552f 70%,#e8852e 100%);
+    background-color: #ed552f;
+    border-top: 2px solid #000;
+    /* box-shadow: 0 -10px 0 0 #000; */
+}
+/* .menu-item:nth-child(1) {
+    margin-left:225px;
+} */
+.menu-item {
+    /* background-color: skyblue; */
+    outline: 0;
+    float: left; 
+    border-left:2px solid rgba(255, 255, 255, .3);     
+    position: relative;
+}
+.menu-button {
+    cursor: pointer;
+    color:#fff;
+    font-weight: 700;
+    font-size: 1.6rem;
+    display: block;
+    line-height: 45px;         
+    padding: 0 20px;
+    text-shadow:
+     1px 0 0 #181818,
+     -1px 0 0 #181818,
+     0 1px 0 #181818,
+     0 -1px 0 #181818;    
+}
+.menu-act .menu-button{
+    color:#ff0;    
+}
+.menu-act .menu-button::after {
+    content:"";    
+    display: block;    
+    border-top: 2px solid #181818;
+}
+.sub-menu {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    position: absolute;
+    display:none;    
+    white-space: nowrap; 
+    top:47px;           
+}
+.menu-act .sub-menu{    
+    display: block;
+}
+.menu li:nth-child(-n+3) .sub-menu{
+    left:0;
+}
+.menu li:nth-child(n+4) .sub-menu{
+    right:0;
+}
+.sub-menu li, .sub-menu a {
+    display:inline-block;
+}
+.sub-menu a {
+    padding: 8px 10px;
+    
+}
+.sub-menu a:hover {
+    color:red;
+}
+.sub-menu a:hover::before {    
+    content: "\e800";
+}
+/* VISUAL */
 .visual {
     background-color: lime;
-    height: 10vh;
+    height: 120px;
+    /* background-color: yellow;
+    background-image: url(./images//ani_flower_01.png),
+    linear-gradient(red, green);
+    background-repeat: no-repeat, repeat;
+    background-position: 30px 40px, 0 0;
+    background-attachment: scroll, fixed;
+    background-size: 100% 100% , 100px 100px;
+    background: url(./images/ani_flower_01.png) no-repeat 
+    30px 40px /100% 100% scroll, linear-gradient(red, green) repeat
+    0 0/ 100% 100% fixed;
+    background-color: yellow; */
+    position: relative;
 }
+@keyframes textAni {
+    0%{
+        font-size: 12px;
+        color:rgba(0, 0, 0, 0);        
+        transform: translate(0,0);
+    }
+    100% {
+        font-size:24px;
+        color:rgba(0, 0, 0, 1);        
+        transform: translate(400px, 75px);
+    }
+}
+.visual-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display:inline-block;
+    background-color: yellow;
+    animation: textAni;
+    animation-duration: 3000ms;
+    animation-fill-mode: forwards;
+    animation-delay: 1500ms;
+    color:rgba(0, 0, 0, 0);    
+}
+@keyframes bgAni {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.visual::before, .visual::after {
+    content:"";
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    animation: bgAni 2s infinite alternate;
+}
+.visual::before {
+    background-image:
+    url(./images/ani_flower_01.png),
+    url(./images/ani_flower_02.png);   
+    background-position: 0 -10px, 670px 0;
+}
+.visual::after {    
+    background-image: url(./images/ani_flower_03.png),
+    url(./images/ani_flower_04.png);
+    background-position: 300px 0, 800px 0;
+    animation-delay: 1s;
+}
+/* MAIN */
 .main {
     height:90vh;
     background-color: #fff;
@@ -107,6 +252,7 @@ body {
     /* flex-direction: row; */
     /* flex-wrap: wrap; */
 }
+/* LOGIN */
 .group {
     /* float:left;
     height:60vh;    
@@ -116,6 +262,10 @@ body {
     background-color: tomato;
     width:250px;    
 }
+.login {
+    position: relative;
+}
+
 .group2 {
     background-color: skyblue;
     width:380px;    
@@ -127,10 +277,12 @@ body {
 /* .clearfix {
     clear:both;
 } */
+/* SLOGAN */
 .slogan {
     background-color: orange;
     height: 10vh;
 }
+/* FOOTER */
 .footer-bg {
     background-color: purple;
     width:100vw;
