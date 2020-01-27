@@ -4,79 +4,174 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
     <title>미소</title>
 </head>
 <body>
     <div class="body">
+        <div class="main--bg">
         <!-- HEADER -->
-        <header>
-            <h1 class="header__logo">
-                <a href="#">
-                    <img src="images/img-logo.png" alt="miso">
-                </a>
-            </h1>
-            <nav class="header__menu">
-                <ul class="header__menu__list">
-                    <li><a href="">가사도우미</a></li>
-                    <li><a href="">이사</a></li>
-                    <li>다른 홈서비스
-                        <ul>
-                            <li><a href="">이사청소</a></li>
-                            <li><a href="">침대 가전청소</a></li>
-                            <li><a href="">펫시팅</a></li>
-                            <li><a href="">더 많은 서비스</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <div class="header__submenu">
-                <ul>
-                    <li><a href="">파트너</a></li>
-                    <li><a href="">고객센터</a></li>
-                </ul>
-            </div>
-        </header>
+            <header class="header clearfix">
+                <h1 class="header__logo">
+                    <a href="#">
+                        <img src="images/img-logo.png" alt="miso">
+                    </a>
+                </h1>
+                <nav class="header__menu">
+                    <ul class="header__menu__list">
+                        <li><a href="">가사도우미</a></li>
+                        <li><a href="">이사</a></li>
+                        <li>다른 홈서비스
+                            <ul>
+                                <li><a href="">이사청소</a></li>
+                                <li><a href="">침대 가전청소</a></li>
+                                <li><a href="">펫시팅</a></li>
+                                <li><a href="">더 많은 서비스</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>        
+                <div class="header__submenu">
+                    <ul>
+                        <li><a href="">파트너</a></li>
+                        <li><a href="">고객센터</a></li>
+                    </ul>
+                </div>            
+            </header>   
+            <section class="main__visual">
+                <div class="main__visual__inner">                
+                    <h2>이사청소</h2>                    
+                    <p>쾌적한 시작<br/>이사청소</p>
+                    <p>검증된 전문 청소팀<br/>
+                        집 전체를 꼼꼼하게</p>
+                    <button class="btn">예약하기</button>               
+                </div>
+            </section>
+        </div>
         <!-- MAIN -->
         <main class="main">
-            <div class="main__visual">
-                <h2 class="a11y">미소의 웹페이지입니다</h2>
-                <p>쾌적한 청소<br/>이사청소</p>
-                <p>검증된 전문 청소팀<br/>
-                    집 전체를 꼼꼼하게</p>
-                <button class="btn">예약하기</button>
-            </div>
             <section class="main__service">
                 <h3>전문장비로 보이지 않는 곳까지</h3>
                 <div class="main__service__img img1">                    
                 </div>
-                <div>
-                    <p></p>
-                    <p></p>
+                <div class="main__service__text">
+                    <p>검증된 전문 청소팀</p>
+                    <p>숙련된 전문 청소팀이 방문하여 집 전체를
+                        전문 장비로 꼼꼼하게 작업합니다.</p>
                 </div>
                 <div class="main__service__img img2">                    
                 </div>
-                <div>
-                    <p></p>
-                    <p></p>
+                <div class="main__service__text">
+                    <p>구역별 전문 장비로 확실하게</p>
+                    <p>세정력이 뛰어난 고압 스팀 청소기,
+                        고객의 건강을 생각한 전문 세제로 구역별 맞춤 작업합니다.</p>
                 </div>
             </section>
             <section class="main__info">
                 <h3>처음부터 끝까지 꼼꼼하게</h3>
+                <div class="main__info__range">
+                    <p>서비스 범위</p>
+                    <ul>
+                        <li>방/거실</li>
+                        <li>주방/욕실</li>
+                        <li>현관/베란다</li>
+                        <li>창/바닥</li>
+                    </ul>
+                    <div class="main__info__range__img"></div>
+                    <ul>
+                        <li>전등 탈거 후 청소</li>
+                        <li>몰딩 도배 풀, 오염 제거</li>
+                        <li>벽지(천장,벽)먼지 제거 후 바닥 청소</li>
+                    </ul>
+                </div>
+                <div class="main__info__fare">
+                    <table>
+                        <tr>
+                            <th>분양평수</th>
+                            <th>서비스 요금</th>
+                        </tr>
+                        <tr>
+                            <td>9평 이하</td>
+                            <td>150,000원</td>
+                        </tr>
+                        <tr>
+                            <td>10-18평</td>
+                            <td>200,000원</td>
+                        </tr>
+                        <tr>
+                            <td>19평 이상</td>
+                            <td>평당 10,900원</td>
+                        </tr>
+                        <tr>
+                            <td>거주청소</td>
+                            <td>평당 12,900원</td>
+                        </tr>
+                    </table>
+                    <a href="#">상세 안내 보기</a>
+                </div>
+                <div class="main__info__available">
+
+                </div>
+                <div class="main__info__box">
+                    <div class="fontllo"></div>
+                    <p>이사를 계획중이신가요?</p>
+                    <p>이사와 이사청소를 함께 주문하면 이사청소가 할인된 요금으로 적용됩니다.</p>
+                    <a href="">자세히 보기</a>
+                </div>
             </section>
             <section class="main__range">
                 <h3>안심하고 이용하세요</h3>
+                <div class="main__range__list">
+                    <div class="main__range__img1"></div>
+                    <p>평점 시스템</p>
+                    <p>고객 후기를 반영하여 높은 평점의
+                        전문 청소팀을 보내드립니다.</p>
+                </div>
+                <div>
+                    <div class="main__range__img2"></div>
+                    <p>확실한 A/S</p>
+                    <p>당일 검수 후
+                        미흡한 부분은 즉시 처리됩니다.</p>
+                </div>
+                <div>
+                    <div class="main__range__img3"></div>
+                    <p>연중무휴 고객센터</p>
+                    <p>도움을 요청할 수 있는 고객센터를 365일 운영합니다.
+                        *운영 시간 : 오전 8시 - 오후 10시</p>
+                </div>
             </section>
             <section class="main__app">
-                <h3>어플로 더욱 간편하게</h3>
+                <h3>어플로 더욱 간편하게</h3>
+                <div class="main__app__box">
+                    <div class="main__app__box__img"></div>
+                    <p>복잡한 절차 없이 몇 번의 터치로 서비스 예약이 가능합니다.</p>
+                    <div class="main__app__box__appimg">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </div>
+                </div>
             </section>
-            <section>
+            <section class="main__QA">
                 <h3>자주 묻는 질문</h3>
+                <ul class="main__QA__list">
+                    <li>Q.이사청소 종류는 어떤게 있나요?</li>
+                    <li>Q.우리 지역에서 미소를 이용할 수 있나요?</li>
+                    <li>Q.시간은 얼마나 걸리나요? </li> 
+                </ul>
             </section>
             <article class="homeservice">
                 <div class="homeservice__items">
-                    <div class="homeservice__items__title"></div>
-                    <div class="homeservice__items__text"></div>
-                    <div class="homeservice__items__img"></div>
+                    <h3>홈서비스 미소</h3>
+                    <p>150만이 검증한 다양한
+                        미소 홈서비스를 이용하세요.</p>
+                    <div class="homeservice__items__img">
+                        <a href="#"><img src="" alt="가사 도우미"></a>
+                        <a href="#"><img src="" alt="이사"></a>
+                        <a href="#"><img src="" alt="이사청소"></a>
+                        <a href="#"><img src="" alt="침대가전청소"></a>
+                        <a href="#"><img src="" alt="다른 홈서비스"></a>
+                    </div>
                 </div>
             </article>
         </main>
@@ -84,17 +179,24 @@
         <div class="footer--bg">
             <footer class="footer">
                 <div class="footer__menu">
-                    <div class="footer__menu__logo">
-                        <img src="" alt="">
-                    </div>
+                    <h2 class="footer__menu__logo">
+                        <a href=""><img src="" alt=""></a>
+                    </h2>
                     <ul class="footer-menu__list">
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
+                        <a href="">
+                            <li>블로그</li>
+                        </a>
+                        <a href="">
+                            <li>이용약관</li>
+                        </a>
+                        <a href="">
+                            <li>개인정보</li>
+                        </a>
                     </ul>
                 </div>
+                <span>@ 2020. 유한회사 미소. Miso, Inc. All Rights Reserved.</span>
                 <address class="footer__address">
-                    
+                    사업자등록번호 : 291-87-00271 | 인허가번호 : 2016-3220163-14-5-00019 | 대표이사 : CHING VICTOR COLUMBIA R | 대표전화 : 1577-8808 | 주소 : 서울특별시 논현로 86길 32, 1층
                 </address>
             </footer>
     </div>

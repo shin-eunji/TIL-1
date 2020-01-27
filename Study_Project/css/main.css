@@ -1,0 +1,95 @@
+body {
+    font-size:16px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color:#2E3035;    
+}
+a {
+    text-decoration: none;
+}
+/* float를 해제하기 위한 clear 선언 */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+.header,
+.main, 
+.footer
+{
+    width:100%;
+    margin: 0 auto;  
+      
+}
+
+.main--bg {
+    background-image: url("https://miso.kr/deep-clean-page/deepclean-desktop.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    height: 540px;
+}
+/* HEADER */
+.header {
+    /* background-color: tomato; */
+    position: relative;
+    font-size:13px;
+    box-sizing: border-box;
+    width:980px;
+}
+.header__logo, .header__menu, .header__submenu {
+    
+} 
+.header__logo {    
+    float:left;  
+    margin-right: 12px;  
+}
+.header__logo a {
+    display:block;
+    padding: 20px 30px 20px;
+}
+.header__menu {
+    float:left; 
+
+}
+.header__menu__list>li {
+    display: inline-block;
+    padding: 22px 8px 20px;
+   
+}
+.header__menu__list>li ul {
+    display:none;
+}
+.header__submenu {
+    float:right;    
+}
+.header__submenu li{
+    display:inline-block;
+    padding: 22px 5px 20px;
+}
+/* MAIN */
+.main__visual__inner {
+    margin-left: 380px;   
+     
+}
+.main__visual__inner h2 {
+    display:block;
+    margin: 100px 0 20px;      
+}
+.main__visual__inner :nth-child(2) {
+    display: block;
+    font-size: 50px;;
+    font-weight: 900;
+    margin: 0 0 16px;
+}
+.main__visual__inner :nth-child(3) {
+    font-size: 20px;
+}
+.main__visual__inner button {
+    margin-top:70px;
+    padding: 15px 80px 18px;
+}
+.main__service {
+    
+}
