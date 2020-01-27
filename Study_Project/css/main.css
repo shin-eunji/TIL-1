@@ -8,19 +8,52 @@ body {
 a {
     text-decoration: none;
 }
+h3 {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 88px 0 64px;
+    
+}
+
+table {
+    border:1px solid #555556;
+}
+th, td {
+    border:1px solid #555556;
+    padding:16px;
+}
+tr:nth-child(2) {
+    background-color: #f3f4f8;
+}
 /* float를 해제하기 위한 clear 선언 */
 .clearfix::after {
     content: "";
     clear: both;
     display: block;
-  }
+}
+.float-left {
+    float:left;
+}
+.float-right {
+    float:right;
+}
 .header,
 .main, 
 .footer
 {
-    width:100%;
-    margin: 0 auto;  
+    position: relative;
+    width:100%;   
       
+}
+.main__service,
+.main__info,
+.main__range,
+.main__app,
+.main__QA,
+.homeservice {
+    position: relative;
+    width:800px;
+    margin:0 auto;     
 }
 
 .main--bg {
@@ -30,6 +63,10 @@ a {
     position: relative;
     height: 540px;
 }
+.main section {
+    border-bottom: 1px solid #a5a6a8;
+    padding-bottom: 50px;
+}
 /* HEADER */
 .header {
     /* background-color: tomato; */
@@ -37,10 +74,9 @@ a {
     font-size:13px;
     box-sizing: border-box;
     width:980px;
+    margin:0 auto;
+    /* background-color: wheat; */
 }
-.header__logo, .header__menu, .header__submenu {
-    
-} 
 .header__logo {    
     float:left;  
     margin-right: 12px;  
@@ -69,9 +105,12 @@ a {
     padding: 22px 5px 20px;
 }
 /* MAIN */
+/* VISUAL */
 .main__visual__inner {
-    margin-left: 380px;   
-     
+    /* margin-left: 380px;    */
+    /* background-color: turquoise; */
+    width:800px;
+    margin:0 auto;
 }
 .main__visual__inner h2 {
     display:block;
@@ -90,6 +129,156 @@ a {
     margin-top:70px;
     padding: 15px 80px 18px;
 }
+/* SERVICE */
 .main__service {
+    padding-bottom: 60px;
+    border:1px soilid #555555;
+    /* background-color: thistle; */
+}
+.main__service__container {
+    display: flex;
+}
+.main__service__img {
+    width:409px;
+    height:300px;
+    margin-right: 48px;
+    border: 1px solid tomato;
+}
+.main__service__img.img1 {
+    background-image: url("/images/dc-2-1@2x.png");
+    background-size: cover;
+    background-position: 100% 100%;
     
+}
+.main__service__img.img2 {
+    background-image: url("/images/dc-2-2@2x.png");
+    background-size: cover;
+    background-position: 100% 100%;
+}
+.main__service span {
+    display:block;
+    font-size: 19px;
+    font-weight: 600;
+    margin:5px 0 10px;
+}
+/* INFO */
+.main__info {
+    background-color: tomato;
+}
+.main__info p {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.main__info__ul {
+    display: flex;
+}
+.main__info__img {
+    display: inline-block;
+    background-image: url("https://miso.kr/deep-clean-page/coverage-1@2x.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.main__info__detail {
+    list-style: unset;    
+}
+.main__info__fare {
+    padding:64px 0;
+}
+.main__info__box {
+    background-color: #f3f4f8;
+}
+/* RANGE */
+.main__range__item {
+    margin-right:10px;
+}
+.main__range span {
+    display:block;
+    font-weight: 500;
+    font-size: 18px;
+    margin:14px 0;
+}
+.main__range p {
+    width:220px;
+}
+/* APP */
+.main__app {
+    margin-top: 50px;
+}
+.main__app h3 {
+    display: inline-block;
+}
+.main__app__box__img img {
+    width:409px;
+    height: 300px;
+}
+.main__app__box__appimg img{    
+    height: 40px;
+}
+
+/* QA */
+.main .main__QA {
+    border: none;
+}
+.main__QA__list li{
+    padding:10px 0;
+    border-top:1px solid #a5a6a8;    
+}
+.main__QA__list :nth-child(3) {
+    border-bottom: 1px solid #a5a6a8;
+}
+.main__QA a {        
+    margin-top:5px;
+    float: right;
+}
+/* HOMESERVICE */
+.homeservice{
+    padding:88px 0 112px;      
+    position: relative;    
+}
+.homeservice h3 {
+    margin:0 0 10px;
+    padding:0;
+}
+.homeservice p {
+    margin:0 0 15px;
+}
+.homeservice a {
+    display: inline-block;        
+}
+.homeservice img {
+    width:110px;
+    margin-right: 10px;
+}
+.homeservice__items {    
+    width:100%;
+    background-color: #f3f4f8; 
+    box-sizing: border-box;
+    padding:64px 84px;
+    position: relative;
+}
+.homeservice__items--box {
+    position: relative;     
+    height: 200px;   
+    /* background-color: tomato; */
+}
+/* FOOTER */
+.footer--bg {    
+    background-color: #262728;
+    padding:24px 24px 92px; 
+    color:#f9f9f9;  
+}
+.footer {
+    width:800px;
+    margin:0 auto;
+}
+.footer__menu__list {
+    display: flex;
+}
+.footer__menu__list a {
+    padding: 10px;
+    color:#ffffff;
+}
+.footer__menu .footer__address {
+    font-size: 13px;    
 }
