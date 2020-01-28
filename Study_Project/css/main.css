@@ -22,9 +22,7 @@ th, td {
     border:1px solid #555556;
     padding:16px;
 }
-tr:nth-child(2) {
-    background-color: #f3f4f8;
-}
+
 /* float를 해제하기 위한 clear 선언 */
 .clearfix::after {
     content: "";
@@ -136,24 +134,24 @@ tr:nth-child(2) {
     /* background-color: thistle; */
 }
 .main__service__container {
-    display: flex;
+    display:flex;
 }
 .main__service__img {
     width:409px;
-    height:300px;
+    height:300px;    
     margin-right: 48px;
     border: 1px solid tomato;
 }
 .main__service__img.img1 {
     background-image: url("/images/dc-2-1@2x.png");
     background-size: cover;
-    background-position: 100% 100%;
+    background-position: 50% 50%;
     
 }
 .main__service__img.img2 {
     background-image: url("/images/dc-2-2@2x.png");
     background-size: cover;
-    background-position: 100% 100%;
+    background-position: 50% 50%;
 }
 .main__service span {
     display:block;
