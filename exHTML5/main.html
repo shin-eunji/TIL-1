@@ -140,24 +140,98 @@
         </div>
         <main class="main">
             <div class="group group1">
-              <div class="login">
-                <div class="login-heading">
-                  로그인
-                </div>
-                <form action="/login" class="login-form">
+              <section class="login">
+                <h2 class="login-heading">
+                  로그인</h2>
+                <form
+                  action="https://formspree.io/xvokylpq"
+                  method="POST"
+                  class="login-form"
+                >
                   <fieldset>
-                    <input type="email" class="user-email">
-                    <input type="password" class="user-pw">
-                    <input type="submit" value="로그인">
+                    <legend>회원 로그인 폼
+                    </legend>
+                    <div class="user-email">
+                      <label
+                        for="userEmail">아이디</label>
+                      <input
+                        name="UserID"
+                        type="email"
+                        id="userEmail"
+                        required
+                        placeholder="이메일 주소"
+                      />
+                    </div>
+                    <div class="user-pw">
+                      <label
+                        for="userPw">비밀번호</label>
+                      <input
+                        name="userPwd"
+                        type="password"
+                        id="userPw"
+                        required
+                        placeholder="8자리 이상"
+                      />
+                    </div>
+                    <button
+                      class="btn-login"
+                      type="submit"
+                    >로그인</button>
                   </fieldset>
                 </form>
-                <div class="sign">
-
-                </div>
-                
-              </div>
+                <ul class="sign">
+                  <li
+                    class="icon-right-open"
+                  ><a href="#">회원가입</a></li>
+                  <li
+                    class="icon-right-open"
+                  ><a href="#">아이디/비밀번호
+                      찾기</a></li>
+                </ul>
+              </section>
+              <h2 class="a11y-hidden">웹 표준 용어</h2>
+              <ul class="validation-list">
+                <li><a href="#" target="_blank" title="W3C Markup 유효성 검사 사이트로 이동(새창)">
+                  W3C markup Validation
+                </a></li>
+                <li><a href="#" target="_blank" title="CSS 유효성 검사 사이트로 이동(새창)">
+                  CSS Validation Service
+                </a></li>
+              </ul>              
+              <section class="term">
+                <h2 class="term-heading">웹 관련 용어</h2>
+                <dl class="term-list">
+                  <div class="odd clearfix"><dt class="term-list-subject">웹표준 이란?</dt>
+                  <dd class="term-list-thumbnail"><img src="./images/web_standards.gif" alt="W3C logo">
+                  </dd>
+                  <dd class="term-list-brief"><a href="#">W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...</a>
+                  </dd></div>
+                </dl>
+                <dl class="term-list">
+                  <div hidden class="even clearfix"><dt class="term-list-subject">웹표준 이란?</dt>
+                  <dd class="term-list-thumbnail"><img src="./images/web_standards.gif" alt="W3C logo">
+                  </dd>
+                  <dd class="term-list-brief"><a href="#">W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...</a>
+                  </dd></div>
+                </dl>
+              </section>              
             </div>
-            <div class="group group2">그룹2</div>
+            <div class="group group2">                                 
+              <section class="search-form">
+                <h2 class="a11y-hidden">검색 폼</h2>
+                <form action="/search" method="GET">
+                <fieldset>
+                  <legend>자료 검색창</legend>
+                  <div><label for="search">
+                  <span class="icon-search search-item"></span>
+                  자료검색
+                  </label>
+                  <input type="search" id="search" name="search" required placeholder="검색어를 입력하세요">
+                  <button class="btn-search" type="submit">검색</button></div>
+                </fieldset>
+                </form>
+              </section>
+            </div>
             <div class="group group3">그룹3</div>            
         </main>
         <article class="slogan">슬로건</article>

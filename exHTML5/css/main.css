@@ -16,11 +16,19 @@
     clip:rect(0,0,0,0);
     clip-path: polygon(0 0, 0 0, 0 0);
 }
+/* 숨김 콘텐츠 */
+.readable-hidden, legend{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+  }
 /* CSS MODULE */
 /* float issue solved CSS */
 .clearfix::after {
-    display:block;
     content:"";
+    display:block;
     clear:both;
 }
 /* COMMON SETTING */
@@ -175,7 +183,7 @@ body {
 }
 /* VISUAL */
 .visual {
-    background-color: lime;
+    /* background-color: lime; */
     height: 120px;
     /* background-color: yellow;
     background-image: url(./images//ani_flower_01.png),
@@ -205,7 +213,7 @@ body {
 .visual-text {
     font-family: Georgia, 'Times New Roman', Times, serif;
     display:inline-block;
-    background-color: yellow;
+    /* background-color: yellow; */
     animation: textAni;
     animation-duration: 3000ms;
     animation-fill-mode: forwards;
@@ -239,36 +247,242 @@ body {
     background-position: 300px 0, 800px 0;
     animation-delay: 1s;
 }
-/* MAIN */
-.main {
-    height:90vh;
-    background-color: #fff;
-    /* overflow: auto;  design problem*/            
-    /* padding: 30px 15px; */
-    padding: 30px 15px;
-    display:flex;
-    justify-content: space-around;
-    flex-flow:row wrap;
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
-}
-/* LOGIN */
-.group {
-    /* float:left;
-    height:60vh;    
-    margin:0 15px; */
-}
-.group1 {
-    background-color: tomato;
-    width:250px;    
-}
-.login {
-    position: relative;
-}
 
+.main{
+    display: flex;
+    /* flex-direction: row; */
+    flex-flow: row wrap;
+    justify-content: space-around;
+    min-height: 450px;
+    padding: 30px 15px;
+    background-color: #fff;
+    /* padding: 30px 15px; */
+    border-radius: 15px 15px 0 0;
+  }
+  .group{
+    /* float: left;
+    height: 60vh;
+    margin: 0 15px; */
+  }
+  .group1{
+    width: 250px;
+  }
+  .group2{
+    width: 380px;
+  }
+  .group3{
+    width: 190px;
+  }
+  /* 로그인 */
+  .login{
+    background-color: #ed552f;
+    background-image: radial-gradient(circle at right top, #e8852e, #ed552f);
+    box-shadow: 5px 5px 0 0 #aaa;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .login-heading{
+    margin: 0;
+    font-size: 1.5rem;
+    color: #ff0;
+    text-indent: 10px;
+  }
+  .login-form{
+    background-color: #fff;
+    border-radius: 5px 5px 0 0;
+    margin-top: 10px;
+    padding: 10px 10px 0 10px;
+  }
+  .login-form fieldset{
+    position: relative;
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 5px;
+  }
+  .user-email, .user-pw{
+    margin-bottom: 5px;
+  }
+  .login-form label{
+    width: 4em;
+    display: inline-block;
+  }
+  .login-form input{
+    width: 90px;
+    height: 22px;
+    border: 1px solid #aaa;
+    padding: 1px 1px 1px 5px;
+  }
+  .btn-login{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ed552f;
+    border-radius: 3px;
+    background-color: #e8852e;
+    color: #fff;
+    padding: 0;
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+  .sign{
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 2px 10px;
+    font-size: 1.3rem;
+  }
+  .sign .icon-right-open::before{
+    color: #ed552f;
+    margin: 0;
+  }
+  .sign a{
+    display: inline-block;
+    padding: 8px 0;
+  }
+  /* 유효성 검사 */
+.validation-list {
+    list-style: none;
+    padding:0;
+    margin:20px 0 0;  
+    
+    
+}
+.validation-list li {    
+    display:block;
+    margin-bottom: 15px;                
+}
+.validation-list a {
+    /* padding-left: 38px; */
+    display:block;    
+    padding: 10px 10px 10px 45px;
+    background: url("../css/images/validation_icon.png") no-repeat 8% 50%,
+     #ccc linear-gradient(180deg, #bbb, #eee);
+    border-radius: 30px;
+    
+}
+/* 웹 관련 용어 */
+.term {    
+    border:1px solid #aaa;
+    border-radius: 5px;
+    background: tomato;
+    margin-top:20px;
+    background:#ccc linear-gradient(90deg, #73c8a9, #373b44);
+    padding: 15px;
+}
+.term-heading {
+    margin: 0 0 15px 0;
+    font-size:1.6rem;    
+}
+.term-list {
+    margin: 0;
+    /* background: aqua; */
+    /* overflow: hidden; */
+}
+.term-list dd {
+    margin:0;
+}
+.term-list::after {
+    content:"";
+    display:block;
+    clear:both;
+
+}
+.term-list-subject, .term-list-brief {
+    float: right;
+    width: 145px;
+}
+.term-subject {        
+    color: #296897;  
+    font-weight: 400;            
+}
+.term-list-thumbnail {             
+    /* background: lime; */
+    float:left;    
+}
+.term-list-thumbnail img {
+    vertical-align: top;
+}
+.term-list .term-list-brief {  
+    /* background: yellow;  */
+    margin:5px 0 15px;
+    line-height: 1.6;    
+} 
+/*  */
+.term-list-subject2, .term-list-brief2 {
+    float: left;
+    width: 145px;
+}
+.term-subject2 {        
+    color: #296897;  
+    font-weight: 400;            
+}
+.term-list-thumbnail2 {             
+    /* background: lime; */
+    float:right;    
+}
+.term-list-thumbnail2 img {
+    vertical-align: top;
+}
+.term-list .term-list-brief2 {  
+    /* background: yellow;  */
+    margin-top:5px;
+    line-height: 1.6;
+} 
 .group2 {
-    background-color: skyblue;
+    /* background-color: skyblue; */
     width:380px;    
+}
+/* SEARCH */
+.search-form {    
+    background:  #ccc linear-gradient(180deg, #bbb, #eee);
+    /* display: flex; */
+    border:1px solid #aaa;
+    border-bottom-color: #fff;
+    border-radius: 15px 15px 0 0;   
+    padding:15px 25px 10px;
+}
+.search-form fieldset {      
+    border: 0;
+    padding: 0;
+    margin: 0;
+    
+}
+/* .search-form div {      
+    border: 0;
+    padding: 0;
+    margin: 0;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+} */
+.search-form input[type="search"] {
+    width:200px;
+    margin:0 1px;
+    padding: 1px 1px 1px 0.4em;
+}
+.search-form label, .search-form input[type="search"], .btn-search {
+    vertical-align: middle;
+}
+.search-form input[type="search"], .btn-search {
+    height:24px;
+    border:1px solid #aaa;
+    border-radius: 3px;    
+}
+.btn-search {
+    color:#fff;
+    background-color: #333;
+    padding:0 8px;
+    font-size: 1.2rem;
 }
 .group3 {
     background-color: pink;
