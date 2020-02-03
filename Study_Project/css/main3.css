@@ -1,0 +1,325 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean');
+
+body {
+    font-family: 'Noto Sans KR', 'Montserrat', sans-serif;
+}
+
+strong {
+    font-size: 40px;
+    font-weight: 700;
+    color:#fff;
+}
+em {
+    font-size: 40px;
+    font-weight: 700;
+}
+.link {
+    color:#055cf5;
+}
+.link::after{
+
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    border:1px solid red;
+    z-index: 999;
+    background-color: #fff;
+}
+.inner-hf {
+    width: 940px;
+    margin: 0 auto;
+}
+.inner {
+    width: 830px;
+    margin: 0 auto;
+}
+.header .header-logo {
+    float: left;
+}
+.header .header-logo a {
+    display: block;
+    padding: 0 10px;
+}
+.header-nav {
+}
+.header-menu {
+    float: left;
+}
+.header-menu > li {
+    display: inline-block;
+    padding: 0 10px;
+}
+.header-menu li > a {}
+.header-menu span {}
+.header-menu-list {
+    float: right;
+}
+.header-menu-list li {
+}
+.header-menu-list li a {}
+.header-submenu {
+    float: right;
+    
+}
+.header-submenu li {
+    display: inline-block;
+    padding: 0 10px;
+}
+.header-submenu a {}
+/* visual */
+.visual {
+    height: 700px;
+    background: url(../images/main-01-desktop.jpg) no-repeat;
+    background-size: cover;
+}
+.visual .reservation {
+    padding: 120px 0;
+    position: relative;
+}
+.reservation a {
+    background-color: aqua;
+    padding: 20px;
+    position: absolute;
+    bottom:0;
+    left:0;
+}
+.reservation p {
+    color:#fff;
+    line-height: 1.5;
+}
+/* branding */
+.branding {
+    background-image: url(../images/main-2@2x.png);
+    background-size: 40%;
+    background-repeat: no-repeat;
+    height:300px;
+    background-position: bottom right;
+    position: relative;
+}
+.branding .link{
+    position: absolute;
+    bottom:60%;
+}
+.branding p{
+    font-size: 30px;
+    font-weight:bold;
+    line-height: 1.5;
+}
+/* main */
+.main-helper, .main-move{
+    display:inline-block;
+    width:390px;
+    height:300px;
+    margin: 30px 10px;
+}
+.main-helper a{
+    display:block;
+    background: url(../images/main-3-1-desktop@2x.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+.main-move a{
+    display:block;
+    background: url(../images/main-3-2-desktop@2x.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+.main h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.main .sub-title {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+.main-cleaning, .main-living, .main-pet{
+    display:inline-block;
+    width: 30%;
+    height:160px;
+    margin: 30px 10px;
+}
+.main-cleaning a{
+    display:block;
+    background: url(../images/main-3-3-desktop@2x.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+.main-living a{
+    display:block;
+    background: url(../images/main-3-4-desktop@2x.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+.main-pet a{
+    display:block;
+    background: url(../images/main-3-5-desktop@2x.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+.main h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 30px;
+}
+.main [class^="main-"]>a{
+    font-size: 1.7rem;
+    font-weight: 300;
+    padding-left: 30px;
+}
+.main-serviceMore {
+    position: relative;
+    background-color: #eff7ff;
+    padding: 30px;
+}
+.main-serviceMore h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 0;
+}
+.main-serviceMore h3::before {
+    content: "";
+}
+.main-serviceMore p {
+    font-size: 1.4rem;
+}
+.main-serviceMore a {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+/* 브래든 철학 */
+.belief p {
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+.belief img {
+    /* display:inline-block; */
+    width: 410px;
+    height: 300px;
+    float: left;
+    margin-right: 30px;
+}
+[class^="belief-"] {
+    width: 100%;
+    height: 380px;
+    
+}
+.belief .title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.belief P {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.belief .app-store a {
+    
+} {}
+.belief .app-store a:nth-child(1) {
+    display: inline-block;
+    width: 120px;
+    height: 60px;
+    background: url(../images/appstore.png) no-repeat;
+    background-size: 100%;
+    margin: 20px 20px 0 0;
+}
+.belief .app-store a:nth-child(2) {
+    display: inline-block;
+    width: 120px;
+    height: 60px;
+    background: url(../images/googleplay.png) no-repeat;
+    background-size: 100%;
+}
+.review {
+    padding: 30px 50px;
+    background-color: #00395b;
+}
+.review em {
+    display: block;
+    color: #fff;
+}
+.review-box {
+    position: relative;
+    display: inline-block;
+    width: 28%;
+    height: 190px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 10px rgba(0,0,0,.1);
+    margin: 0 10px;
+    padding: 20px;
+}
+.review-box .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.5;
+    padding-bottom: 10px;
+}
+.review-box .txt {
+    font-size: 1.5rem;
+    font-weight: 300;
+    height: 86px;
+    overflow: hidden;
+}
+.review-box .link {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+/* 인재채용 */
+.together {
+    padding: 70px 50px 100px;
+    background-color: #eef7ff;
+    margin: 30px auto;
+    background-image: url(../images/hiring@2x.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+}
+.together h2 {
+    font-size: 2rem;
+
+}
+
+/* footer */
+.footer-bg {
+    background: #262728;
+
+}
+.footer {
+    padding: 20px 0;
+}
+.footer img {
+    
+}
+.footer ul {
+    display:inline-block;
+}
+.footer li {
+    display: inline-block;
+    color: #fff;
+    padding: 5px 10px;
+}
+.footer a {
+    display:inline-block;
+}
+.copyright {
+    display: block;
+    color: #a3a7ae;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.address {
+    display: block;
+    color: #a3a7ae;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
