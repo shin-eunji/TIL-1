@@ -1,0 +1,13 @@
+/* COMMON STYLE */
+/* BOX MODEL RESET */
+body, body *, body *::before, body *::after{
+    box-sizing: border-box;
+}
+/* COMMON LAYOUT */
+.container, .appMain{
+    display: flex;    
+    flex-flow: row wrap;
+}
+.appHeader{
+    
+}
