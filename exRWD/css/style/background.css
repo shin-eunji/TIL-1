@@ -2,16 +2,13 @@
     background-color: silver;
 }
 .appHeader{
-    background-color: yellow;
-    min-height: 15vh;
+    background-color: yellow;    
 }
 .appNavigation{
-    background-color: tan;
-    min-height: 10vh;
+    background-color: tan;    
 }
 .appMain{
-    background-color: Darkblue;
-    min-height: 60vh;
+    background-color: Darkblue;    
 }
 .book{
     background-color: orange;
@@ -30,6 +27,5 @@
     background-color:skyblue;
 }
 .appFooter{
-    background-color: magenta;
-    min-height: 15vh;
+    background-color: magenta;    
 }

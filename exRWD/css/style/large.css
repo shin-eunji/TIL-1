@@ -6,8 +6,68 @@ body{
     justify-content: center;    
 }
 .appHeader, .appMain{
-    width:1000px;
+    width:1000px;    
 }
+.appHeader{
+    height: 85px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto ;
+    grid-template-areas: "brand member"
+                         "brand search"; */
+}
+.brand{    
+    margin:0;    
+    /* grid-area: brand; */
+}
+.memberOnly{    
+    /* grid-area: member; */
+}
+.searchForm{    
+    text-align: right;
+    /* grid-area: search;     */
+}
+input[name="search"]{
+    width:400px;
+}
+.buttonSearch{
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    background-color: #988574;
+    color:#fff;
+    height:35px;
+}
+/* .appHeader{
+    padding:10px;
+    max-height: 80px;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+    justify-content: center;
+}
+.memberOnly{
+    display: flex;
+    justify-content: flex-end; 
+    font-weight: 400;
+}
+.searchForm{
+    margin-top:5px;
+}
+input[name="search"]{
+    width:400px;
+    height:35px;
+    padding:3px 15px;
+}
+.buttonSearch{    
+    font-size:0.9em;
+    background: #988574;
+    color:#fff;
+    
+} */
 .appNavigation, .appFooter{
     width:100%;
 }
